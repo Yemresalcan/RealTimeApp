@@ -15,11 +15,13 @@ io.on("connection",(socket)=> {
     console.log("Bir Kullanici giris yapti ✋");
 
     socket.emit("receive",lastColor);
+
     socket.on("newColor",(color)=>{
         console.log(color);
         lastColor = color;
         io.emit("receive",color);
     });
+    
 socket.on("disconnect",(socket)=> {
     console.log("Bir Kullanici Cikis yapti 👋")
 });

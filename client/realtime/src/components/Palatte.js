@@ -15,6 +15,7 @@ function Palatte({ activeColor }) {
 			<button onClick={() => send(color)}>Click</button>
 		</div>
 	);
+	
 }
 
 export default Palatte;
